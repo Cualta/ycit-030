@@ -36,7 +36,7 @@ export function App() {
     return (
         <>
             <nav>
-                <span>Tacomania</span>
+                <h1>Tacomania</h1>
 
                 <ul>
                     <li>

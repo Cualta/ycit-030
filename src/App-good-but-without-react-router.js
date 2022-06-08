@@ -1,8 +1,8 @@
-import dayjs from "dayjs"
-import { useState } from "react"
 import { About } from "./About"
 import { Cart } from "./Cart"
 import { Products } from "./Products"
+import dayjs from "dayjs"
+import { useState } from "react"
 
 export function App() {
     console.log("URL", window.location.pathname)
@@ -87,7 +87,7 @@ export function App() {
     return (
         <>
             <nav>
-                <span>Tacomania</span>
+                <h1>Tacomania</h1>
                 <ul>{theItems}</ul>
             </nav>
             <div id="app-body">{theComponent}</div>
