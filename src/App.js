@@ -1,4 +1,4 @@
-import { Link, Outlet, Route, Routes, useLocation } from "react-router-dom"
+import { Link, Route, Routes } from "react-router-dom"
 
 import { About } from "./About"
 import { Cart } from "./Cart"
@@ -17,6 +17,9 @@ import { useBobsCounter } from "./useBobsCounter"
 
 export function App() {
     const num = useBobsCounter()
+    let style = ({ isHover }) => ({
+        color: isHover ? "#284975" : "",
+    })
 
     const theNavItems = navbarItems.map((el) => {
         return (
