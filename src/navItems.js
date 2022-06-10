@@ -19,4 +19,9 @@ export const navbarItems = [
         name: "about",
         label: "About",
     },
+    {
+        key: "navbar-item-contact",
+        name: "contact",
+        label: "Contact",
+    },
 ]

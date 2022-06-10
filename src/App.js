@@ -1,7 +1,8 @@
-import { Link, Route, Routes } from "react-router-dom"
+import { Link, Outlet, Route, Routes, useLocation } from "react-router-dom"
 
 import { About } from "./About"
 import { Cart } from "./Cart"
+import { Contact } from "./Contact"
 import { Products } from "./Products"
 import { navbarItems } from "./navItems"
 import { useBobsCounter } from "./useBobsCounter"
@@ -16,9 +17,6 @@ import { useBobsCounter } from "./useBobsCounter"
 
 export function App() {
     const num = useBobsCounter()
-    let style = ({ isHover }) => ({
-        color: isHover ? "#284975" : "",
-    })
 
     const theNavItems = navbarItems.map((el) => {
         return (
@@ -40,6 +38,10 @@ export function App() {
                     <Route path="products" element={<Products />} />
                     <Route path="about" element={<About />} />
                     <Route path="cart" element={<Cart />} />
+                    <Route path="contact/" element={<Contact />}>
+                        <Route path="info" element={<>ContactInfo</>} />
+                        <Route path="media" element={<>ContactSocialMedia</>} />
+                    </Route>
                 </Routes>
             </div>
         </>
